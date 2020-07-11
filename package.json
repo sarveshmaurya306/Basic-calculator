@@ -5,17 +5,22 @@
   "homepage": "https://sarveshmaurya306.github.io/deploy-react/src/",
   "dependencies": {
     "@material-ui/core": "^4.10.2",
+    "@pusher/chatkit": "^0.7.18",
+    "@pusher/chatkit-client": "^1.14.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^5.0.0-alpha1",
+    "express": "^4.17.1",
     "gh-pages-deploy": "^0.5.1",
     "node-sass": "^4.14.1",
+    "pusher": "^3.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-map-gl": "^5.2.7",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^2.1.8"
+    "react-scripts": "^2.1.8",
+    "socket.io": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
