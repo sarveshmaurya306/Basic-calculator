@@ -29,26 +29,9 @@ export default function App(params) {
 	setInterval(Calculate, 100)
 
 	function Result(event) {
-		var index = 0;
-		var op = '+';
-		for (var i = 0; i < numarr.length; i++) {
-			if (numarr[i] === '+' || numarr[i] === '-' || numarr[i] === '*' || numarr[i] === '/') {
-				index = i;
-				op = numarr[i];
-				break;
-			}
-		}
-
-		var first = parseFloat(numarr.slice(0, index))
-		var second = parseFloat(numarr.slice(index + 1,))
-		switch (op) {
-			case '+': setResult(first + second); break;
-			case '-': setResult(first - second); break;
-			case '*': setResult(first * second); break;
-			case '/': setResult(first / second); break;
-			default: alert("cannot operate this...");setResult("");break;
-		}
+		setResult(eval(numarr));
 	}
+	
 	return (<>
 		<div style={{ width:300, height:450, background: "#fff", boxShadow: "2px 2px 20px 13px blue", position: 'absolute', top: "50%", left: "50%", transform: "translate(-50%,-50%)" }}>
 			<Display value={number} res={result} />
