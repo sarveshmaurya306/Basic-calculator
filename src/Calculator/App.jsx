@@ -26,10 +26,15 @@ export default function App(params) {
 		setNumber(numarr)
 	}
 
-	setInterval(Calculate, 100)
+	setInterval(Calculate, 10)
 
 	function Result(event) {
-		setResult(eval(numarr));
+		try{
+			setResult(eval(numarr));
+		}
+		catch(e){
+			alert("this cannot be calculated!!!")
+		}
 	}
 	
 	return (<>
@@ -59,7 +64,8 @@ export default function App(params) {
 				<Button type="." />
 				<Button type="/" />
 			</div>
-				<center><button className="btn btn-outline-danger d-flex justify-content-center attractive_button px-4 py-2" style={{width:200}} onClick={Result}>=</button></center>
+				<center><button className="btn btn-outline-danger d-flex justify-content-center attractive_button px-4 py-2" style={{width:200}} onClick={Result}>=</button>
+				</center>
 		</div>
 	</>)
 };
